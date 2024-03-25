@@ -1,0 +1,93 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "my_app",
+            "cwd": "Users\\dolig\\Développement mobile\\my_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "my_app (profile mode)",
+            "cwd": "Users\\dolig\\Développement mobile\\my_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "my_app (release mode)",
+            "cwd": "Users\\dolig\\Développement mobile\\my_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "app1",
+            "cwd": "Users\\dolig\\StudioProjects\\app1",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app1 (profile mode)",
+            "cwd": "Users\\dolig\\StudioProjects\\app1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app1 (release mode)",
+            "cwd": "Users\\dolig\\StudioProjects\\app1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "AppFlutter",
+            "cwd": "Users\\dolig\\StudioProjects\\AppFlutter",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "AppFlutter (profile mode)",
+            "cwd": "Users\\dolig\\StudioProjects\\AppFlutter",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "AppFlutter (release mode)",
+            "cwd": "Users\\dolig\\StudioProjects\\AppFlutter",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "apptest",
+            "cwd": "Users\\dolig\\StudioProjects\\apptest",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tpn2",
+            "cwd": "Users\\dolig\\StudioProjects\\tpn2",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "tp_2",
+            "cwd": "Users\\dolig\\StudioProjects\\tp_2",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "untitled",
+            "cwd": "Users\\dolig\\StudioProjects\\untitled",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
