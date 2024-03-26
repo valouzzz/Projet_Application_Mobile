@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/movies_model.dart'; 
+import '../models/movies_model.dart';
 import '../services/api_manager.dart'; // Adjusted to use ApiManager for consistency
 
 // Définit les événements gérés par MoviesBloc
@@ -11,7 +11,8 @@ abstract class MovieEvent extends Equatable {
 // Événement déclenché pour charger les films
 class MovieFetchEvent extends MovieEvent {
   @override
-  List<Object> get props => []; // Pas de données supplémentaires nécessaires pour cet événement
+  List<Object> get props =>
+      []; // Pas de données supplémentaires nécessaires pour cet événement
 }
 
 // Définit les états possibles pour MoviesBloc
@@ -33,7 +34,8 @@ class MovieLoadingState extends MovieState {
 
 // État lorsque les films sont chargés avec succès
 class MovieLoadedState extends MovieState {
-  final List<Movie> movies; // Utilise MovieDetails pour la clarté et la cohérence
+  final List<Movie>
+      movies; // Utilise MovieDetails pour la clarté et la cohérence
 
   const MovieLoadedState(this.movies);
 
@@ -49,6 +51,8 @@ class MovieErrorState extends MovieState {
 
   @override
   List<Object> get props => [message];
+
+  get error => null;
 }
 
 // Bloc qui gère le chargement des films
@@ -59,10 +63,12 @@ class MoviesBloc extends Bloc<MovieEvent, MovieState> {
     on<MovieFetchEvent>((event, emit) async {
       emit(MovieLoadingState());
       try {
-        final movies = await apiManager.fetchMovies(); // Appel à la méthode renommée dans ApiManager
+        final movies = await apiManager
+            .fetchMovies(); // Appel à la méthode renommée dans ApiManager
         emit(MovieLoadedState(movies));
       } catch (e) {
-        emit(MovieErrorState('Failed to fetch movies: $e')); // Utilisation d'un message d'erreur plus clair
+        emit(MovieErrorState(
+            'Failed to fetch movies: $e')); // Utilisation d'un message d'erreur plus clair
       }
     });
   }

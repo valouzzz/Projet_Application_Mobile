@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 // Importe tes widgets ici
 import 'widgets/header.dart';
 import 'widgets/widgetComics.dart';
@@ -21,11 +21,7 @@ class AccueilPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Header(), // Ton widget d'en-tête personnalisé
-            WidgetSeries(), // Ton widget pour les séries
-            WidgetComics(), // Ton widget pour les comics
-            WidgetFilms(), // Ton widget pour les films
-            // Ajoute d'autres widgets pour d'autres catégories
+            //Ajoute d'autres widgets pour d'autres catégories
           ],
         ),
       ),
@@ -33,3 +29,4 @@ class AccueilPage extends StatelessWidget {
     );
   }
 }
+*/

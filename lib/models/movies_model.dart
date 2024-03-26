@@ -2,7 +2,7 @@ class Movie {
   final int id;
   final String title;
   final String coverImageUrl;
-  final String plotSummary;
+  final String synopsis;
   final String releaseDate;
   final String runningTime;
   final String productionBudget;
@@ -17,7 +17,7 @@ class Movie {
     required this.id,
     required this.title,
     required this.coverImageUrl,
-    this.plotSummary = 'Unknown',
+    this.synopsis = 'Unknown',
     required this.releaseDate,
     required this.runningTime,
     required this.productionBudget,
@@ -35,7 +35,7 @@ class Movie {
       title: json['name'] as String? ?? 'Unknown',
       coverImageUrl: json['image']?['original_url'] as String? ??
           'https://example.com/default_image.png', // Fournit une URL par défaut si aucune image n'est disponible
-      plotSummary: json['deck'] as String? ??
+      synopsis: json['deck'] as String? ??
           'Information not available', // Utilisation de 'deck' comme résumé
       releaseDate: json['release_date'] as String? ?? 'Unknown',
       runningTime: json['runtime'] as String? ?? 'Unknown',

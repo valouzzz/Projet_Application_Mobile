@@ -60,6 +60,8 @@ class CharacterErrorState extends CharacterState {
 
   @override
   List<Object> get props => [message];
+
+  get error => null;
 }
 
 // Bloc pour la gestion des personnages, répondant aux événements et mettant à jour l'état
