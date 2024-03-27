@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/comics_model.dart';
-import '../services/api_manager.dart'; // Changé en ApiManager pour refléter le renommage suggéré précédemment
+import '../models_api/comics_model.dart';
+import '../manager/api_manager.dart'; // Changé en ApiManager pour refléter le renommage suggéré précédemment
 
 // Définition des événements du BLoC pour les comics
 abstract class ComicEvent extends Equatable {
@@ -49,6 +49,8 @@ class ComicErrorState extends ComicState {
 
   @override
   List<Object> get props => [message];
+
+  get error => null;
 }
 
 // Le BLoC qui gère l'état et la logique métier pour les comics

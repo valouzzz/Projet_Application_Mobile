@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/news_model.dart';
-import '../services/api_manager.dart'; // Ajusté pour utiliser ApiManager
+import '../models_api/news_model.dart';
+import '../manager/api_manager.dart'; // Ajusté pour utiliser ApiManager
 
 // Définit les événements gérés par NewsBloc
 abstract class NewsEvent extends Equatable {

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/episode_model.dart';
-import '../services/api_manager.dart'; // Adjusted for naming consistency
+import '../models_api/episode_model.dart';
+import '../manager/api_manager.dart'; // Adjusted for naming consistency
 
 // Defines events for episode-related actions
 abstract class EpisodeEvent extends Equatable {

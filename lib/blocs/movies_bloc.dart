@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/movies_model.dart';
-import '../services/api_manager.dart'; // Adjusted to use ApiManager for consistency
+import '../models_api/movies_model.dart';
+import '../manager/api_manager.dart'; // Adjusted to use ApiManager for consistency
 
 // Définit les événements gérés par MoviesBloc
 abstract class MovieEvent extends Equatable {

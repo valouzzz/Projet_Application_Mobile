@@ -1,10 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/character_model.dart';
-import '../models/comics_model.dart';
-import '../models/movies_model.dart';
-import '../models/series_model.dart';
-import '../services/api_manager.dart'; // Ajusté pour utiliser ApiManager
+import '../models_api/character_model.dart';
+import '../models_api/comics_model.dart';
+import '../models_api/movies_model.dart';
+import '../models_api/series_model.dart';
+import '../manager/api_manager.dart'; // Ajusté pour utiliser ApiManager
 
 // Événements de recherche
 abstract class SearchEvent extends Equatable {
@@ -51,19 +51,19 @@ class SearchResultsState extends SearchState {
 
 // État d'erreur de la recherche
 class SearchErrorState extends SearchState {
-  final String message; // Renommé pour une meilleure clarté
+  final String error; // Renommé pour une meilleure clarté
 
-  const SearchErrorState(this.message);
+  const SearchErrorState(this.error);
 
   @override
-  List<Object> get props => [message];
+  List<Object> get props => [error];
 }
 
 // Bloc de recherche
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
   final ApiManager apiManager; // Utilise ApiManager
 
-  SearchBloc({required this.apiManager}) : super(SearchInitialState()) {
+  SearchBloc(this.apiManager) : super(SearchInitialState()) {
     on<PerformSearchEvent>(_onPerformSearchEvent);
   }
 

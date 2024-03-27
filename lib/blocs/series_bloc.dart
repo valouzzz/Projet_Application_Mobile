@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/series_model.dart';
-import '../services/api_manager.dart'; // Ajusté pour utiliser ApiManager
+import '../models_api/series_model.dart';
+import '../manager/api_manager.dart'; // Ajusté pour utiliser ApiManager
 
 // Définit les événements gérés par SeriesBloc
 abstract class SeriesEvent extends Equatable {
@@ -49,6 +49,8 @@ class SeriesErrorState extends SeriesState {
 
   @override
   List<Object> get props => [message];
+
+  get error => null;
 }
 
 // Bloc qui gère le chargement des séries

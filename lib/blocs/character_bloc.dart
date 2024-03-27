@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../models/character_model.dart';
-import '../services/api_manager.dart'; // Adaptation pour la cohérence de nommage
+import '../models_api/character_model.dart';
+import '../manager/api_manager.dart'; // Adaptation pour la cohérence de nommage
 
 // Définition des types d'événements gérés par le bloc Character
 abstract class CharacterEvent extends Equatable {
